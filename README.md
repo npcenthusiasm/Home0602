@@ -1,2 +1,2 @@
-# Welcome to my LearningLog
+# LearningLog
 Python,Raspberrypi
