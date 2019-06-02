@@ -1,1 +1,1 @@
-# Home0602
+# Welcome to my LearningLog
