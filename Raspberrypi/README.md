@@ -1,6 +1,6 @@
 # 樹莓派軟硬體基本設定
 
-## 1. 上網下載映像檔(官方作業系統)
+## 1.上網下載映像檔(官方作業系統)
    https://www.raspberrypi.org/downloads/raspbian/  
    選擇 Raspbian Stretch with desktop Download ZIP
 
@@ -20,7 +20,7 @@
 
 1.建立一個"空檔案" 檔名叫ssh(小寫)並且沒有副檔名   --->   一個開關 把樹梅派的ssh打開
 
-2.建立一個wpa_supplicant.conf   --->   新增熱點   
+2.建立一個wpa_supplicant.conf   --->   新增熱點
 
     ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
     update_config=1
@@ -52,20 +52,20 @@ IPv4 位址 . . . . . . . . . . . . : 192.168.137.128
 輸入進到設定
 
     $sudo raspi-config
-    1. Change User Password
-    2. Network Options 
-        N1更改Hostname
-        N2設定Wi-fi
-    3.Boot Options
-        B3 Splash Screen 關閉 disable
-    4.Localisation Options
-        I2 Change Local 更改語系....只有改選項變中文而已
-        I2 Change Timezone 設定時區>Asia Taipei
-    5.Interfacing Options
-        P1-P5 全部 啟用 enable 
-    7.Advamced Options
-        A1 Expand Filesystem Ensures...  
-    然後重開機
+1. Change User Password
+2. Network Options 
+   * N1更改Hostname
+   * N2設定Wi-fi
+3. Boot Options
+   * B3 Splash Screen 關閉 disable
+4. Localisation Options
+   * I1 Change Local 更改語系....只有改選項變中文而已
+   * I2 Change Timezone 設定時區>Asia Taipei
+5. Interfacing Options
+   * P1-P5 全部 啟用 enable 
+7. Advamced Options
+   * A1 Expand Filesystem Ensures...  
+然後重開機
 存檔2次
 
     $ sudo sync
