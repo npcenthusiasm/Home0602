@@ -51,7 +51,7 @@
 
 * 建立編譯目錄
 
-       cd opencv-master
+       cd opencv-4.1.0
        mkdir build
        cd build
        
