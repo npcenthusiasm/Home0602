@@ -1,4 +1,21 @@
 # 樹莓派軟硬體基本設定
+## 安裝相關軟體
+### Lab0528  
+1. putty
+   https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+   
+2. Termius
+   https://termius.com/
+
+3. X server
+   https://sourceforge.net/projects/vcxsrv/
+4. angry ip
+   https://angryip.org/download/#windows
+
+* putty連接樹梅派
+* 在Termius寫code  
+* openCV開的視窗，送到X server 顯示出來開，因為樹梅派沒接螢幕，所以需要X server來輸出畫面  
+* angry ip 用來掃樹莓派ip    
 
 ## 1.上網下載映像檔(官方作業系統)
    https://www.raspberrypi.org/downloads/raspbian/  
@@ -32,9 +49,14 @@
        psk="00000000"
        }
 
-筆電要連手機熱點
+**筆電要連手機熱點**
 
-有線網路連樹梅派 控制台\網路和網際網路\網路連線\  選擇 無線網路連線>內容>共用 打勾 允許其他網路使用者透過這台電的網際網路連線來連線
+有線網路連樹梅派 
+
+
+> 開起網路共和中心>變更介面卡設定>選擇無線網路連線>內容>共用打勾
+> - [x] 允許其他網路使用者透過這台電的網際網路連線來連線  
+> \\CAT028\pi  接下來就可以去資料夾路徑的位置打上，便可開啟樹梅派資料夾，CAT028為 hostname 或 raspberry  ip 
 
 cmd輸入 ipconfig 找無線網路
 無線區域網路介面卡 Wi-Fi:
@@ -75,8 +97,7 @@ IPv4 位址 . . . . . . . . . . . . : 192.168.137.128
 重開機  
 
     sudo shutdown -r now
-或
-
+    或
     sudo reboot
 關機  
 
