@@ -71,7 +71,11 @@ IPv4 位址 . . . . . . . . . . . . : 192.168.137.128
 
     login as: pi
     Psd:raspberry
-    
+修改鍵盤配置  
+
+     sudo vi /etc/default/keyboard
+     將 XKBLAYOUT="gb" 改成 XKBLAYOUT="us"
+   
 輸入進到設定
 
     sudo raspi-config
@@ -105,6 +109,13 @@ IPv4 位址 . . . . . . . . . . . . : 192.168.137.128
 
     sudo shutdown -h now
     
+關掉WiFi睡眠功能  
+
+    sudo vi /etc/rc.local
+    加上
+    iwconfig wlan0 power off
+    iw dev wlan0 set power_save off
+
 樹莓派如入其他wifi連線
 
     cd /etc/wpa_supplicant/
@@ -116,6 +127,33 @@ IPv4 位址 . . . . . . . . . . . . : 192.168.137.128
     ssid="wife名稱"
     psk="wifi密碼"
     }
+    
+安裝遠端桌面
+
+    sudo apt-get install xrdp
+   
+安裝 SAMBA
+
+1. 安裝
+
+       sudo apt-get install samba
+       
+2. 設定帳號
+
+       sudo pdbedit -a -u pi
+3. 修改
+
+       sudo vi /etc/samba/smb.conf
+       將[homes] 區段中的 read only=yes 改為no
+       
+4. 重新啟動 samba
+
+       sudo /etc/init.d/samba restart
+       
+>  Windows連線方式 \\ip_address\pi  
+>  Mac smb://ip_address/pi
+
+
 
 
     
