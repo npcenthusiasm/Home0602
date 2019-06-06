@@ -97,6 +97,15 @@
        import cv2
 沒有錯誤訊息表示成功
        
+### 6. 備分資料
+
+ * 壓縮
+ 
+       tar zcvf opencv.tgz opencv
+       
+ * 解壓縮
+ 
+       tar zxvf opencv.tgz
 
 
 
