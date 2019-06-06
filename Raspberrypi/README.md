@@ -153,6 +153,15 @@ IPv4 位址 . . . . . . . . . . . . : 192.168.137.128
 >  Windows連線方式 \\ip_address\pi  
 >  Mac smb://ip_address/pi
 
+安裝新版 vi 與設定
+
+    sudo apt-get install vim
+    sudo vi /etc/vim/vimrc.local
+    set tabstop=4
+    set expandtab
+    set nu
+
+
 
 
 
