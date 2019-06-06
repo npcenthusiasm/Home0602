@@ -94,14 +94,28 @@ IPv4 位址 . . . . . . . . . . . . : 192.168.137.128
 
     sudo sync
     sudo sync
+    
 重開機  
 
     sudo shutdown -r now
     或
     sudo reboot
+    
 關機  
 
     sudo shutdown -h now
+    
+樹莓派如入其他wifi連線
+
+    cd /etc/wpa_supplicant/
+    sudo vi wpa_supplicant.conf
+    
+編輯wpa_supplicant.conf檔案新增以下文字
+
+    network={
+    ssid="wife名稱"
+    psk="wifi密碼"
+    }
 
 
     
