@@ -18,18 +18,19 @@
     
 在燒錄好的映像檔 boot 磁區中建立2個檔案  使用NotePad++  編輯器下方Windows(CR LF)改成Unix(LF)格式
 
-1.建立一個"空檔案" 檔名叫ssh(小寫)並且沒有副檔名   --->   一個開關 把樹梅派的ssh打開
+1. 建立一個"空檔案" 檔名叫ssh(小寫)並且沒有副檔名
+   作用:一個開關，把樹梅派的ssh打開
 
-2.建立一個wpa_supplicant.conf   --->   新增熱點
+2. 建立一個wpa_supplicant.conf
 
-    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-    update_config=1
-    country=TW
-
-    network={
-    ssid="ErciNet"
-    psk="00000000"
-    }
+       ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+       update_config=1
+       country=TW
+       
+       network={
+       ssid="ErciNet"
+       psk="00000000"
+       }
 
 筆電要連手機熱點
 
@@ -51,7 +52,7 @@ IPv4 位址 . . . . . . . . . . . . : 192.168.137.128
     
 輸入進到設定
 
-    $sudo raspi-config
+    sudo raspi-config
 1. Change User Password
 2. Network Options 
    * N1更改Hostname
@@ -64,19 +65,22 @@ IPv4 位址 . . . . . . . . . . . . : 192.168.137.128
 5. Interfacing Options
    * P1-P5 全部 啟用 enable 
 7. Advamced Options
-   * A1 Expand Filesystem Ensures...  
+   * A1 Expand Filesystem Ensures...
+
 然後重開機
-存檔2次
+存檔2次  
 
-    $ sudo sync
-    $ sudo sync
-重開機
+    sudo sync
+    sudo sync
+重開機  
 
-    1.$ sudo shutdown -r now
-    2.$ sudo reboot
-關機
+    sudo shutdown -r now
+或
 
-    $ sudo shutdown -h now
+    sudo reboot
+關機  
+
+    sudo shutdown -h now
 
 
     
