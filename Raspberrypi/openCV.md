@@ -15,73 +15,73 @@
 
 * 編譯套件
 
-       sudo apt-get install build-essential cmake
+      sudo apt-get install build-essential cmake
        
 * 圖片套件
 
-       sudo apt-get install libjpeg-dev libpng-dev libtiff-dev
+      sudo apt-get install libjpeg-dev libpng-dev libtiff-dev
 * 影片套件
 
-       sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
-       sudo apt-get install libxvidcore-dev libx264-dev
+      sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+      sudo apt-get install libxvidcore-dev libx264-dev
        
 * GTK套件
 
-       sudo apt-get install libgtk-3-dev libcanberra-gtk*
+      sudo apt-get install libgtk-3-dev libcanberra-gtk*
        
 * 最佳化套件
 
-       sudo apt-get install libatlas-base-dev gfortran
+      sudo apt-get install libatlas-base-dev gfortran
        
 * 樹莓派加裝
 
-       sudo apt-get install at-spi2-core  
+      sudo apt-get install at-spi2-core  
 
 ### 2. Python設定
 
 * 安裝python3開發套件
 
-       sudo apt-get install python3-dev
+      sudo apt-get install python3-dev
              
 * 安裝 numpy 套件
 
-       sudo pip install numpy
+      sudo pip install numpy
 
 ### 3. 設定編譯條件
 
 * 建立編譯目錄
 
-       cd opencv-4.1.0
-       mkdir build
-       cd build
+      cd opencv-4.1.0
+      mkdir build
+      cd build
        
 * 修改 swapfile size
 
-       sudo vi /etc/dphys-swapfile
-       修改 CONF_SWAPSIZE=2048
-       改完後
-       sudo /etc/init.d/dphys-swapfile stop
-       sudo /etc/init.d/dphys-swapfile start
+      sudo vi /etc/dphys-swapfile
+      修改 CONF_SWAPSIZE=2048
+      改完後
+      sudo /etc/init.d/dphys-swapfile stop
+      sudo /etc/init.d/dphys-swapfile start
        
 ### 4. 執行 cmake
 
-       cmake -D CMAKE_BUILD_TYPE=RELEASE \
-       -D CMAKE_INSTALL_PREFIX=/usr/local \
-       -D OPENCV_EXTRA_MODULES_PATH=~/opencv/opencv_contrib-4.1.0/modules \
-       -D ENABLE_NEON=ON \
-       -D ENABLE_VFPV3=ON \
-       -D BUILD_TESTS=OFF \
-       -D OPENCV_ENABLE_NONFREE=ON \
-       -D INSTALL_PYTHON_EXAMPLES=OFF \
-       -D BUILD_EXAMPLES=OFF \
-       -D PYTHON_EXECUTABLE=/usr/bin/python3 \
-       ..
+    cmake -D CMAKE_BUILD_TYPE=RELEASE \
+    -D CMAKE_INSTALL_PREFIX=/usr/local \
+    -D OPENCV_EXTRA_MODULES_PATH=~/opencv/opencv_contrib-4.1.0/modules \
+    -D ENABLE_NEON=ON \
+    -D ENABLE_VFPV3=ON \
+    -D BUILD_TESTS=OFF \
+    -D OPENCV_ENABLE_NONFREE=ON \
+    -D INSTALL_PYTHON_EXAMPLES=OFF \
+    -D BUILD_EXAMPLES=OFF \
+    -D PYTHON_EXECUTABLE=/usr/bin/python3 \
+    ..
        
 ### 5. 編譯
 
 * 在 build 目錄下執行
 
-       make -j4
+      make -j4
        
  * 編譯完成後執行
 
