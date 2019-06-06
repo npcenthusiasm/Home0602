@@ -73,8 +73,8 @@ IPv4 位址 . . . . . . . . . . . . : 192.168.137.128
     Psd:raspberry
 修改鍵盤配置  
 
-     sudo vi /etc/default/keyboard
-     將 XKBLAYOUT="gb" 改成 XKBLAYOUT="us"
+    sudo vi /etc/default/keyboard
+    將 XKBLAYOUT="gb" 改成 XKBLAYOUT="us"
    
 輸入進到設定
 
@@ -109,6 +109,15 @@ IPv4 位址 . . . . . . . . . . . . : 192.168.137.128
 
     sudo shutdown -h now
     
+更新
+* 更新清單
+
+      sudo apt-get update
+      
+* 更新軟體
+
+      sudo apt-get dist-upgrade
+      
 關掉WiFi睡眠功能  
 
     sudo vi /etc/rc.local
