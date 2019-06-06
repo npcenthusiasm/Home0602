@@ -1,20 +1,20 @@
 # 樹莓派軟硬體基本設定
 
-### 1.上網下載映像檔(官方作業系統)
-    https://www.raspberrypi.org/downloads/raspbian/
-選擇 Raspbian Stretch with desktop Download ZIP
+## 1. 上網下載映像檔(官方作業系統)
+   https://www.raspberrypi.org/downloads/raspbian/  
+   選擇 Raspbian Stretch with desktop Download ZIP
 
 
-### 2.下載Etcher 
-    https://www.raspberrypi.org/documentation/installation/installing-images/README.md
-Download Etcher and install it.
+## 2.下載Etcher 
+   https://www.raspberrypi.org/documentation/installation/installing-images/README.md  
+   Download Etcher and install it.
     
     
-### 3.燒錄作業系統
-選擇樹莓派映象檔，燒錄作業系統至SD卡
-
+## 3.燒錄作業系統
+   選擇樹莓派映象檔，燒錄作業系統至SD卡
+   燒錄完後將SD卡退出來並重插一次(若有跳出格式化的視窗，請不要格式化)
+   
 ***
-    燒錄完後將SD卡退出來並重插一次(若有跳出格式化的視窗，請不要格式化)
     
 在燒錄好的映像檔 boot 磁區中建立2個檔案  使用NotePad++  編輯器下方Windows(CR LF)改成Unix(LF)格式
 
