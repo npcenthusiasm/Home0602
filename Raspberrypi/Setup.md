@@ -3,7 +3,7 @@
 1. putty <br>
 https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
    
-2.Termius <br>
+2. Termius <br>
 https://termius.com/
 
 3. X server <br>
